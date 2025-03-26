@@ -1,3 +1,6 @@
+import { Button } from '@/components/ui/button';
+import DarkModeToggle from '@/components/DarkModeToggle';
+
 import {
   SignInButton,
   SignUpButton,
@@ -8,16 +11,17 @@ import {
 
 export default function Home() {
   return (
-    <div>
+    <div className='m-4'>
       <SignedOut>
         <SignInButton mode="modal">
-          <button>Sign in</button>
+          <Button>Sign in</Button>
         </SignInButton>
       </SignedOut>
 
       <SignedIn>
         <UserButton />
       </SignedIn>
+      <DarkModeToggle />
     </div>
   );
 }
